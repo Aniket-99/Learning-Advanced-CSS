@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMAGE GRID</title>
+	<style type="text/css">
+		
+		.container{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			grid-auto-rows: 75px;
+			grid-gap: 10px;
+			grid-auto-flow: dense; /*Used to fill the gap and the images will autofit in the gap regardless of there arrangement in the html*/
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.horizontal {
+			grid-column: span 2;
+		}
+
+		.verticle {
+			grid-row: span 2;
+		}
+
+		.big {
+			grid-column: span 2;
+			grid-column: span 2;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"></div>
+		<div class="verticle"><img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"></div>
+		<div class="horizontal"><img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297__340.jpg"></div>
+		<div><img src="https://cdn.pixabay.com/photo/2016/01/08/11/57/butterfly-1127666__340.jpg"></div>
+
+		<div><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"></div>
+		<div class="big"><img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"></div>
+		<div><img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297__340.jpg"></div>
+		<div class="verticle"><img src="https://cdn.pixabay.com/photo/2016/01/08/11/57/butterfly-1127666__340.jpg"></div>
+
+		<div><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"></div>
+		<div class="horizontal"><img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"></div>
+		<div><img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297__340.jpg"></div>
+		<div class="big"><img src="https://cdn.pixabay.com/photo/2016/01/08/11/57/butterfly-1127666__340.jpg"></div>
+
+		<div><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"></div>
+		<div class="horizontal"><img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"></div>
+		<div><img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297__340.jpg"></div>
+		<div class="big"><img src="https://cdn.pixabay.com/photo/2016/01/08/11/57/butterfly-1127666__340.jpg"></div>
+
+		<div><img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297__340.jpg"></div>
+		<div class="verticle"><img src="https://cdn.pixabay.com/photo/2016/01/08/11/57/butterfly-1127666__340.jpg"></div>
+	</div>
+
+
+</body>
+</html>

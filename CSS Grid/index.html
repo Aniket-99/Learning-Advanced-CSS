@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>CSS GRID</title>
+	<style type="text/css">
+/*		.container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 100px) ;
+
+			grid-template: repeat(2, 100px) / repeat(3, 1fr) ;
+			grid-gap: 10px;
+		}*/
+
+	/*	.container {
+			display: grid;
+			grid-gap: 40px;
+			grid-template: 40px 200px 40px / repeat(12, 1fr);
+		}
+
+		.header {
+			grid-column: 2 / -1;  Start at 2 and end at last
+		}
+
+		.menu {
+			grid-row: 1 / 3;
+		}
+
+		.content {
+			grid-column: 2 / -1;
+		}
+
+		.footer {
+			grid-column: 1 / -1;
+
+		}*/
+
+
+		.container {
+			height: 100%;
+			display: grid;
+			grid-gap: 30px;
+			grid-template: 40px 200px 40px / repeat(12, 1fr);
+			grid-template-areas: 
+			"h h h h h h h h h h h h"
+			"m c c c c c c c c c c c"
+			"f f f f f f f f f f f f";
+		}
+
+		.header {
+			grid-area: h;
+
+		}
+		.menu {
+			grid-area: m;
+
+		}
+		.content {
+			grid-area: c;
+
+		}
+		.footer {
+			grid-area: f;
+		}
+
+
+
+	</style>
+</head>
+<body>
+<!-- 
+	<div class="container">
+		<div style="color: red; font-weight: bold;">1</div>
+		<div style="color: black; font-weight: bold;">2</div>
+		<div style="color: purple; font-weight: bold;">3</div>
+		<div style="color: yellow; font-weight: bold;">4</div>
+		<div style="color: green; font-weight: bold;">5</div>
+		<div style="color: blue; font-weight: bold;">6</div>
+	</div>
+ -->
+
+ 	<div class="container">
+ 		<div class="header" style="font-size: 50px; background-color: red">HEADER</div>
+ 		<div class="menu" style="font-size: 50px;background-color: green">MENU</div>
+ 		<div class="coontent" style="font-size: 50px; background-color:blue ">CONTENT</div>
+ 		<div class="footer" style="font-size: 50px; background-color: yellow">FOOTER</div>
+
+ 	</div>
+
+
+
+
+
+</body>
+</html>
