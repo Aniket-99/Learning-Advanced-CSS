@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auto fit vs Auto fill</title>
+
+	<style type="text/css">	
+
+	.container {
+		display: grid;
+		height: 100%;
+		grid-gap: 10px;
+		grid-template-rows: 100px 100px;
+		grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+		border: 1px solid black;
+		font-size: 40px;
+
+	}
+
+	.container2{
+		display: grid;
+		height: 100%;
+		grid-gap: 10px;
+		grid-template-rows: 100px 100px;
+		grid-template-columns: repeat(auto-fill,minmax(100px, 1fr));
+		border: 1px solid black;
+		font-size: 40px;
+	}
+	/* Autofit will adjust the content and fits in it when the 100px is reached and when new columns can be available to add while auto fill will allocate the space when 100px is reached but will not stretches the content equally(will axdd column tracks which is basically empty)*/
+
+		
+	</style>
+</head>
+<body>
+	<h2 style="text-align: center; font-size: 30px;">Auto-Fit</h2>
+	<div class="container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+
+	<h2 style="text-align: center; font-size: 30px;">Auto-Fill</h2>
+	<div class="container2">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+
+<h4>Ps: Adjust the browser and see the difference</h4>
+</body>
+</html>
